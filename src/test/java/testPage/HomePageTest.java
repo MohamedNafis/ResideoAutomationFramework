@@ -1,6 +1,5 @@
 package testPage;
 
-
 import common.CommonAction.*;
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
