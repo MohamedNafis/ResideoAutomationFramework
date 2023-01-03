@@ -68,5 +68,6 @@ public class HomePageTest  extends BaseClass{
 		driver.findElement(By.linkText("resideo.com")).click();
 	}
 	
+
 	
 }

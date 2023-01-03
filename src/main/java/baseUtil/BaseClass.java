@@ -17,7 +17,19 @@ public class BaseClass {
 	@BeforeMethod
 	public void setUp() {
 		
+		/*
+		// System is a class and setProperty is a method
+		// 1st way, to show the location of chrome driver
+		// This is an absolute path
+		
 		System.setProperty("WebDriver.chrome.driver", "/Users/mohammednafis/eclipse-workspace/com.resideo.customer/driver/chromedriver");
+		
+		*/
+		
+		// 2nd way, to show the location of chrome driver
+		// This is a dynamic way (relative path)
+		
+		System.setProperty("WebDriver.chrome.driver", System.getProperty("user.dir") + "/driver/chromedriver");
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
