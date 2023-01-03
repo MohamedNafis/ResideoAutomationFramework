@@ -16,8 +16,10 @@ public class BaseClass {
 	
 	@BeforeMethod
 	public void setUp() {
-		
-		System.setProperty("WebDriver.chrome.driver", "/Users/mohammednafis/eclipse-workspace/com.resideo.customer/driver/chromedriver");
+		//1st way
+		//System.setProperty("WebDriver.chrome.driver", "/Users/mohammednafis/eclipse-workspace/com.resideo.customer/driver/chromedriver");
+		//2nd way
+		System.setProperty("WebDriver.chrome.driver", System.getProperty("user.dri")+"/driver/chromedriver");
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();

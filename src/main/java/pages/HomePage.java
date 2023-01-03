@@ -16,6 +16,8 @@ public class HomePage {
 		PageFactory.initElements(driver, this);
 	}
 	
+	@FindBy (css="img#imgComapnyLogo")
+	WebElement logo;
 	
 	@FindBy(id="btnUserID")
 	WebElement loginButton;
@@ -56,6 +58,35 @@ public class HomePage {
 	//Use of css as locator 
 	@FindBy(css = "input.placeheld.ui-autocomplete-input")
 	WebElement searchKeyword;
+	
+	@FindBy(css="input.button")
+	WebElement forgotIdSubmit;
+	
+	@FindBy (css = "select[id= 'CategoryDropDownId']")
+	WebElement forgotIdDropDown;
+	
+	@FindBy (linkText = "homeowners link")
+	WebElement homeOwner;
+	
+	@FindBy (id = "ctl00_lnkHeaderLink1")
+	WebElement userAccount;
+	
+	@FindBy(xpath = "//a[text()='Register']")
+	WebElement newUserReg2;
+	
+	@FindBy(css = "input[type='text']")
+	WebElement searchOptionInHomePage;
+	
+	@FindBy(id = "quantity")
+	WebElement searchButtonInHomePage;
+	
+	
+	public boolean logoDisplayed() {
+		boolean flag = logo.isDisplayed();
+		System.out.println("The logo is Displayed? Ans: " + flag);
+		return flag;
+		
+	}
 	
 	public void clickLoginButton() throws InterruptedException {
 		clickElement(loginButton);
@@ -113,5 +144,65 @@ public class HomePage {
 		clickElement(searchKeyword);
 		Thread.sleep(3000);
 	}
+	
+	public boolean forgotIdSubmitButtonEnabled() {
+		clickElement(forgotUserId);
+		boolean sb = forgotIdSubmit.isEnabled();
+		System.out.println("The Submit Button Is Enabled? Ans: " + sb);
+		return sb;
+	}
+	
+	public boolean forgotIdDropDown() {
+		clickElement(forgotUserId);
+		boolean db = forgotIdDropDown.isSelected();
+		clickElement(forgotIdDropDown);
+		System.out.println("The DropDown Is Selected? Ans: " + db);
+		return db;
+		
+	}
+	
+	public void clickHomeOwner() {
+		clickElement(homeOwner);
+		System.out.println("The Titel Of The Page is: " + driver.getTitle());
+	}
+	
+	public void clickUserAccount() {
+		clickElement(userAccount);
+		System.out.println("The URL Of The Page is: " + driver.getCurrentUrl());
+		
+	}
+	
+	public void clicknewUserReg2() throws InterruptedException {
+		clickElement(newUserReg2);
+		Thread.sleep(3000);
+		System.out.println("The text For The Web Element Is: " +newUserReg2.getText());
+		System.out.println("The Attribute For (ID) The Web Element Is: " +newUserReg2.getAttribute("id"));
+		System.out.println("The Attribute For (Href) The Web Element Is: " +newUserReg2.getAttribute("href"));
+		System.out.println("The Attribute For (Class) The Web Element Is: " +newUserReg2.getAttribute("class"));
+		System.out.println("The Attribute For (Title) The Web Element Is: " +newUserReg2.getAttribute("title"));
+		
+	}
+	
+	
+	
+	public void clickSearchkeyWordText() throws InterruptedException {
+		inputText(searchKeyword, "1234567890");
+		Thread.sleep(5000);
+		clearText(searchKeyword);
+		Thread.sleep(5000);
+		inputText(searchKeyword, "Mohammed Nafis");
+		Thread.sleep(5000);
+		clickElement(searchKeyword);
+		Thread.sleep(5000);
+		
+		
+		
+	}
+	
+	
+	
+	
+
+	
 
 }
