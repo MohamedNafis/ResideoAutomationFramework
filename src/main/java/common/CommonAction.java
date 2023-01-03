@@ -1,29 +1,53 @@
 package common;
 
-
 import java.util.NoSuchElementException;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 
 public class CommonAction {
-	
+
 	public static void clickElement(WebElement element) {
-		
-		try{
+
+		try {
 			element.click();
-		}
-		catch (NoSuchElementException | NullPointerException e) {
+		} catch (NoSuchElementException | NullPointerException e) {
 			e.printStackTrace();
 		}
-		
+
 	}
-	
-	public static void inputText(WebElement element, String input) {
+
+	public static void inputText(WebElement element, String input ) {
 		try {
 			element.sendKeys(input);
-		}
-		catch (NoSuchElementException | NullPointerException e) {
+		} catch (NoSuchElementException | NullPointerException e) {
 			e.printStackTrace();
 		}
 	}
+
+	public static void clearText(WebElement element) {
+		try {
+			element.clear();
+		} catch (NoSuchElementException | NullPointerException e) {
+			e.printStackTrace();
+
+		}
+
+	}
+	
+	public static void enter_or_return(WebElement element) {
+		
+		try {
+			element.sendKeys(Keys.ENTER);
+			try {
+				element.sendKeys(Keys.RETURN);
+			}catch (NoSuchElementException | NullPointerException e) {
+				e.printStackTrace();
+			}
+		}
+		
+		catch (NoSuchElementException | NullPointerException e) {
+			e.printStackTrace();
+		}
+	}	
 }
