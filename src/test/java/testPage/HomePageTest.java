@@ -99,9 +99,14 @@ public class HomePageTest  extends BaseClass{
 		homePage.clicknewUserReg2();
 	}
 	
-	@Test(enabled = true, priority = 16)
+	@Test(enabled = false, priority = 16)
 	public void clickSearchKeyWordTextTest() throws InterruptedException {
 		homePage.clickSearchkeyWordText();
 	}
 	
+	@Test(enabled = true, priority = 17)
+	public void use_of_navigate_method_test() throws InterruptedException {
+		homePage.use_of_navigate_method();
+	}
+
 }

@@ -1,129 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="1" total="11" passed="10" failed="0" skipped="0">
+<testng-results ignored="17" total="18" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-12-27T23:16:16 EST" name="Default suite" finished-at="2022-12-27T23:17:52 EST" duration-ms="95747">
+  <suite started-at="2022-12-31T03:05:48 EST" name="Default suite" finished-at="2022-12-31T03:06:15 EST" duration-ms="26941">
     <groups>
     </groups>
-    <test started-at="2022-12-27T23:16:16 EST" name="Default test" finished-at="2022-12-27T23:17:52 EST" duration-ms="95747">
+    <test started-at="2022-12-31T03:05:48 EST" name="Default test" finished-at="2022-12-31T03:06:15 EST" duration-ms="26941">
       <class name="testPage.HomePageTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testPage.HomePageTest@771a660]" started-at="2022-12-27T23:16:16 EST" name="setUp" finished-at="2022-12-27T23:16:22 EST" duration-ms="6243" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testPage.HomePageTest@5a45133e]" started-at="2022-12-31T03:05:48 EST" name="setUp" finished-at="2022-12-31T03:05:54 EST" duration-ms="6394" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="clickLoginButtonTest()[pri:1, instance:testPage.HomePageTest@771a660]" started-at="2022-12-27T23:16:22 EST" name="clickLoginButtonTest" finished-at="2022-12-27T23:16:26 EST" duration-ms="3077" status="PASS">
+        <test-method signature="clickSearchKeyWordTextTest()[pri:16, instance:testPage.HomePageTest@5a45133e]" started-at="2022-12-31T03:05:54 EST" name="clickSearchKeyWordTextTest" finished-at="2022-12-31T03:06:15 EST" duration-ms="20331" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- clickLoginButtonTest -->
-        <test-method is-config="true" signature="tearUp()[pri:0, instance:testPage.HomePageTest@771a660]" started-at="2022-12-27T23:16:26 EST" name="tearUp" finished-at="2022-12-27T23:16:26 EST" duration-ms="217" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearUp -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testPage.HomePageTest@771a660]" started-at="2022-12-27T23:16:26 EST" name="setUp" finished-at="2022-12-27T23:16:30 EST" duration-ms="4675" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="clickUserIdTest()[pri:2, instance:testPage.HomePageTest@771a660]" started-at="2022-12-27T23:16:30 EST" name="clickUserIdTest" finished-at="2022-12-27T23:16:34 EST" duration-ms="3097" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- clickUserIdTest -->
-        <test-method is-config="true" signature="tearUp()[pri:0, instance:testPage.HomePageTest@771a660]" started-at="2022-12-27T23:16:34 EST" name="tearUp" finished-at="2022-12-27T23:16:34 EST" duration-ms="192" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearUp -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testPage.HomePageTest@771a660]" started-at="2022-12-27T23:16:34 EST" name="setUp" finished-at="2022-12-27T23:16:38 EST" duration-ms="4461" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="clickUserPassedTest()[pri:3, instance:testPage.HomePageTest@771a660]" started-at="2022-12-27T23:16:38 EST" name="clickUserPassedTest" finished-at="2022-12-27T23:16:41 EST" duration-ms="3049" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- clickUserPassedTest -->
-        <test-method is-config="true" signature="tearUp()[pri:0, instance:testPage.HomePageTest@771a660]" started-at="2022-12-27T23:16:41 EST" name="tearUp" finished-at="2022-12-27T23:16:41 EST" duration-ms="158" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearUp -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testPage.HomePageTest@771a660]" started-at="2022-12-27T23:16:41 EST" name="setUp" finished-at="2022-12-27T23:16:48 EST" duration-ms="6313" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="clickNewUserReg()[pri:4, instance:testPage.HomePageTest@771a660]" started-at="2022-12-27T23:16:48 EST" name="clickNewUserReg" finished-at="2022-12-27T23:16:54 EST" duration-ms="5858" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- clickNewUserReg -->
-        <test-method is-config="true" signature="tearUp()[pri:0, instance:testPage.HomePageTest@771a660]" started-at="2022-12-27T23:16:54 EST" name="tearUp" finished-at="2022-12-27T23:16:54 EST" duration-ms="214" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearUp -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testPage.HomePageTest@771a660]" started-at="2022-12-27T23:16:54 EST" name="setUp" finished-at="2022-12-27T23:16:58 EST" duration-ms="4317" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="clickForgotUserIdTest()[pri:5, instance:testPage.HomePageTest@771a660]" started-at="2022-12-27T23:16:58 EST" name="clickForgotUserIdTest" finished-at="2022-12-27T23:17:02 EST" duration-ms="4281" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- clickForgotUserIdTest -->
-        <test-method is-config="true" signature="tearUp()[pri:0, instance:testPage.HomePageTest@771a660]" started-at="2022-12-27T23:17:02 EST" name="tearUp" finished-at="2022-12-27T23:17:03 EST" duration-ms="209" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearUp -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testPage.HomePageTest@771a660]" started-at="2022-12-27T23:17:03 EST" name="setUp" finished-at="2022-12-27T23:17:07 EST" duration-ms="4136" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="clickUserPasswordTest()[pri:6, instance:testPage.HomePageTest@771a660]" started-at="2022-12-27T23:17:07 EST" name="clickUserPasswordTest" finished-at="2022-12-27T23:17:11 EST" duration-ms="4474" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- clickUserPasswordTest -->
-        <test-method is-config="true" signature="tearUp()[pri:0, instance:testPage.HomePageTest@771a660]" started-at="2022-12-27T23:17:11 EST" name="tearUp" finished-at="2022-12-27T23:17:11 EST" duration-ms="250" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearUp -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testPage.HomePageTest@771a660]" started-at="2022-12-27T23:17:11 EST" name="setUp" finished-at="2022-12-27T23:17:16 EST" duration-ms="4603" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="inputTextInUserIdFieldAndPasswordFieldThenClickLoginButtonTest()[pri:7, instance:testPage.HomePageTest@771a660]" started-at="2022-12-27T23:17:16 EST" name="inputTextInUserIdFieldAndPasswordFieldThenClickLoginButtonTest" finished-at="2022-12-27T23:17:22 EST" duration-ms="6283" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- inputTextInUserIdFieldAndPasswordFieldThenClickLoginButtonTest -->
-        <test-method is-config="true" signature="tearUp()[pri:0, instance:testPage.HomePageTest@771a660]" started-at="2022-12-27T23:17:22 EST" name="tearUp" finished-at="2022-12-27T23:17:23 EST" duration-ms="221" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearUp -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testPage.HomePageTest@771a660]" started-at="2022-12-27T23:17:23 EST" name="setUp" finished-at="2022-12-27T23:17:27 EST" duration-ms="4814" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="clickForgotPasswordUserNameTest()[pri:8, instance:testPage.HomePageTest@771a660]" started-at="2022-12-27T23:17:27 EST" name="clickForgotPasswordUserNameTest" finished-at="2022-12-27T23:17:35 EST" duration-ms="8012" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- clickForgotPasswordUserNameTest -->
-        <test-method is-config="true" signature="tearUp()[pri:0, instance:testPage.HomePageTest@771a660]" started-at="2022-12-27T23:17:35 EST" name="tearUp" finished-at="2022-12-27T23:17:36 EST" duration-ms="205" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearUp -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testPage.HomePageTest@771a660]" started-at="2022-12-27T23:17:36 EST" name="setUp" finished-at="2022-12-27T23:17:40 EST" duration-ms="4064" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="clickResideoMainPageTest()[pri:9, instance:testPage.HomePageTest@771a660]" started-at="2022-12-27T23:17:40 EST" name="clickResideoMainPageTest" finished-at="2022-12-27T23:17:44 EST" duration-ms="4603" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- clickResideoMainPageTest -->
-        <test-method is-config="true" signature="tearUp()[pri:0, instance:testPage.HomePageTest@771a660]" started-at="2022-12-27T23:17:44 EST" name="tearUp" finished-at="2022-12-27T23:17:44 EST" duration-ms="210" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearUp -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testPage.HomePageTest@771a660]" started-at="2022-12-27T23:17:44 EST" name="setUp" finished-at="2022-12-27T23:17:49 EST" duration-ms="4180" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="clickSearchkeywordTest()[pri:10, instance:testPage.HomePageTest@771a660]" started-at="2022-12-27T23:17:49 EST" name="clickSearchkeywordTest" finished-at="2022-12-27T23:17:52 EST" duration-ms="3096" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- clickSearchkeywordTest -->
-        <test-method is-config="true" signature="tearUp()[pri:0, instance:testPage.HomePageTest@771a660]" started-at="2022-12-27T23:17:52 EST" name="tearUp" finished-at="2022-12-27T23:17:52 EST" duration-ms="158" status="PASS">
+        </test-method> <!-- clickSearchKeyWordTextTest -->
+        <test-method is-config="true" signature="tearUp()[pri:0, instance:testPage.HomePageTest@5a45133e]" started-at="2022-12-31T03:06:15 EST" name="tearUp" finished-at="2022-12-31T03:06:15 EST" duration-ms="167" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearUp -->

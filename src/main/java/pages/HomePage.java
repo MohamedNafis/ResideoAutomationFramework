@@ -1,11 +1,14 @@
 package pages;
 
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import static common.CommonAction.*;
+
+
 
 public class HomePage {
 	
@@ -186,23 +189,29 @@ public class HomePage {
 	
 	
 	public void clickSearchkeyWordText() throws InterruptedException {
-		inputText(searchKeyword, "1234567890");
+
+		inputText(searchKeyword, "doorbell");
 		Thread.sleep(5000);
+		enter_or_return(searchKeyword);
 		clearText(searchKeyword);
 		Thread.sleep(5000);
-		inputText(searchKeyword, "Mohammed Nafis");
+		inputText(searchKeyword, "water");
 		Thread.sleep(5000);
-		clickElement(searchKeyword);
+		enter_or_return(searchKeyword);
 		Thread.sleep(5000);
-		
-		
 		
 	}
 	
-	
-	
-	
-
-	
+	public void use_of_navigate_method() throws InterruptedException {
+		Thread.sleep(3000);
+		driver.navigate().to("https://www.amazong.com");
+		Thread.sleep(3000);
+		driver.navigate().back();
+		Thread.sleep(3000);
+		driver.navigate().forward();
+		Thread.sleep(3000);
+		driver.navigate().refresh();
+		Thread.sleep(3000);
+	}
 
 }

@@ -5,8 +5,8 @@
     <classes>
       <class name="testPage.HomePageTest">
         <methods>
+          <include name="clickSearchInHomePageTest"/>
           <include name="tearUp"/>
-          <include name="clickForgotPasswordUserNameTest"/>
           <include name="setUp"/>
         </methods>
       </class> <!-- testPage.HomePageTest -->

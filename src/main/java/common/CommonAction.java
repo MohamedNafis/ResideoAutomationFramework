@@ -2,6 +2,7 @@ package common;
 
 import java.util.NoSuchElementException;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 
 public class CommonAction {
@@ -16,7 +17,7 @@ public class CommonAction {
 
 	}
 
-	public static void inputText(WebElement element, String input) {
+	public static void inputText(WebElement element, String input ) {
 		try {
 			element.sendKeys(input);
 		} catch (NoSuchElementException | NullPointerException e) {
@@ -33,4 +34,20 @@ public class CommonAction {
 		}
 
 	}
+	
+	public static void enter_or_return(WebElement element) {
+		
+		try {
+			element.sendKeys(Keys.ENTER);
+			try {
+				element.sendKeys(Keys.RETURN);
+			}catch (NoSuchElementException | NullPointerException e) {
+				e.printStackTrace();
+			}
+		}
+		
+		catch (NoSuchElementException | NullPointerException e) {
+			e.printStackTrace();
+		}
+	}	
 }
