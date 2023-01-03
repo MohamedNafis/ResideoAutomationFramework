@@ -189,6 +189,7 @@ public class HomePage {
 	
 	
 	public void clickSearchkeyWordText() throws InterruptedException {
+
 		inputText(searchKeyword, "doorbell");
 		Thread.sleep(5000);
 		enter_or_return(searchKeyword);
@@ -212,10 +213,5 @@ public class HomePage {
 		driver.navigate().refresh();
 		Thread.sleep(3000);
 	}
-	
-	
-	
-
-	
 
 }

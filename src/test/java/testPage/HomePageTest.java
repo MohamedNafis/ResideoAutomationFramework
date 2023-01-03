@@ -108,5 +108,5 @@ public class HomePageTest  extends BaseClass{
 	public void use_of_navigate_method_test() throws InterruptedException {
 		homePage.use_of_navigate_method();
 	}
-	
+
 }
