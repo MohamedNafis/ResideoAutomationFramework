@@ -19,7 +19,7 @@ public class HomePage {
 		PageFactory.initElements(driver, this);
 	}
 	
-	@FindBy (css="img#imgComapnyLogo")
+	@FindBy (css="img#imgComapnyLogodogo")
 	WebElement logo;
 	
 	@FindBy(id="btnUserID")
@@ -82,6 +82,10 @@ public class HomePage {
 	
 	@FindBy(id = "quantity")
 	WebElement searchButtonInHomePage;
+	
+	// For logger use
+	@FindBy(name="ctl00$PlaceHolderMain$UserName Wrong_text")
+	WebElement wrongUserId;
 	
 	
 	public boolean logoDisplayed() {
@@ -187,9 +191,8 @@ public class HomePage {
 	}
 	
 	
-	
+	// logger Positive test 
 	public void clickSearchkeyWordText() throws InterruptedException {
-
 		inputText(searchKeyword, "doorbell");
 		Thread.sleep(5000);
 		enter_or_return(searchKeyword);
@@ -213,5 +216,20 @@ public class HomePage {
 		driver.navigate().refresh();
 		Thread.sleep(3000);
 	}
+	// to test logger if web element is not correct
+	public void loggerNegativeMethod() throws InterruptedException {
+		inputText(wrongUserId, "Nafis247");
+		inputText(userPassword, "1234567890");
+		clickElement(loginButton);
+		Thread.sleep(6000);
+		
+	}
+
+
+	
+	
+
+
+	
 
 }
