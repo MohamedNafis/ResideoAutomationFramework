@@ -2,10 +2,15 @@ package baseUtil;
 
 import java.time.Duration;
 
+import org.openqa.selenium.Dimension;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
@@ -16,9 +21,15 @@ import static utils.InterFaceConstant.*;
 
 public class BaseClass {
 	
-    public WebDriver driver;
-	public HomePage homePage;// or protected type.
+    protected WebDriver driver;
+	protected HomePage homePage;// or protected type.
 	Configuration config;
+	protected JavascriptExecutor js;
+	protected WebDriverWait wait;
+	protected Dimension dimension;
+	protected Actions actions;
+	protected Select select;
+
 	
 	@BeforeMethod
 	public void setUp() {
@@ -80,10 +91,10 @@ public class BaseClass {
 		// and the best practice to show location: ./driver/chromedriver
 		//System.setProperty("WebDriver.chrome.driver", "./driver/Chromedriver");
 		//driver = new ChromeDriver();
-		
 		config = new Configuration();
 		initDriver();
-
+		js = (JavascriptExecutor)driver;
+		actions = new Actions(driver);
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
 		//driver.get("https://customer.resideo.com/_layouts/15/honeywell.acs.gwc/sitelogin2.aspx");
@@ -91,10 +102,12 @@ public class BaseClass {
 		driver.get(config.getProperties(URL));
 		// how to convert String to long ----> Long.parseLong()
 		long pageLoadTime = Long.parseLong(config.getProperties(PAGELOAD_WAIT));
-		long implicitlyTime = Long.parseLong(config.getProperties(IMPLICITLY_WAIT));
+		long implicitlyWait = Long.parseLong(config.getProperties(IMPLICITLY_WAIT));
+		long explicitlyWait = Long.parseLong(config.getProperties(EXPLICITLY_WAIT));
 		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(pageLoadTime));
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(implicitlyTime));
-		homePage = new HomePage(driver);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(implicitlyWait));
+		wait = new WebDriverWait(driver,Duration.ofSeconds(explicitlyWait));
+		initClasses();
 	}
 	
 	private void initDriver() {
@@ -119,9 +132,15 @@ public class BaseClass {
 		}
 	}
 	
+	
+	private void initClasses() {
+		homePage = new HomePage(driver);
+	}
+	
 	@AfterMethod
 	public void tearUp() {
 		driver.quit();
 	}
+
 
 }
